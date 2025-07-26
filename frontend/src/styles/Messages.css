@@ -1,0 +1,123 @@
+/* 🌿 Chat Header */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f0f2f5;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 🌿 Messages area */
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #e5ddd5; /* WhatsApp beige */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🌿 Message bubbles */
+.message-bubble {
+  max-width: 65%;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  transition: background 0.3s ease-in-out;
+}
+
+/* ✅ Incoming (left side) */
+.message-incoming {
+  background: #fff;
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+
+/* ✅ Outgoing (right side) */
+.message-outgoing {
+  background: #dcf8c6;
+  align-self: flex-end;
+  border-top-right-radius: 0;
+}
+
+/* 🌿 Chat Input */
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: #f0f2f5;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  background: #25D366;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chat-input button:hover {
+  background: #20bd5a;
+}
+
+/* 🌿 Scrollbar styling */
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+.messages::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* ✅ Message Meta (time + ticks) */
+.message-meta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 11px;
+  margin-top: 3px;
+  color: gray;
+}
+
+/* ✅ Tick Styling */
+.tick {
+  font-size: 14px;
+  margin-left: 4px;
+  color: gray; /* default for sent/delivered */
+  transition: color 0.4s ease-in-out; /* 🔥 smooth tick color change */
+}
+
+/* ✅ Blue ticks when read */
+.tick-read {
+  color: #34B7F1; /* WhatsApp blue */
+  transition: color 0.4s ease-in-out;
+}
+
+/* ✅ Optional subtle hover effect for outgoing messages */
+.message-outgoing:hover {
+  background: #c8f4b5;
+  transition: background 0.3s ease-in-out;
+}
